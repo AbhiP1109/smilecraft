@@ -1,0 +1,793 @@
+/* ============================================================
+   PREMIUM DARK THEME
+   Inspired by Linear.app, Vercel, Stripe, Apple Dark Mode
+   ============================================================ */
+
+/* ---------- Base Dark Theme ---------- */
+body.dark-theme {
+  background: var(--bg);
+  color: var(--text);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Smooth theme transition for all elements */
+body.dark-theme *,
+body.dark-theme *::before,
+body.dark-theme *::after {
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ============================================================
+   NAVBAR — Glassmorphism with subtle border
+   ============================================================ */
+body.dark-theme .navbar {
+  background: rgba(10, 10, 15, 0.8) !important;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(39, 39, 42, 0.6);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .nav-link {
+  color: var(--text-light) !important;
+  font-weight: 500;
+  position: relative;
+}
+
+body.dark-theme .nav-link:hover,
+body.dark-theme .nav-link.active {
+  color: var(--primary) !important;
+}
+
+body.dark-theme .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--primary-gradient);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+body.dark-theme .nav-link:hover::after,
+body.dark-theme .nav-link.active::after {
+  width: 60%;
+}
+
+body.dark-theme .logo {
+  color: var(--primary) !important;
+  text-shadow: 0 0 20px rgba(45, 212, 191, 0.3);
+}
+
+body.dark-theme .theme-btn {
+  color: var(--text);
+}
+
+body.dark-theme .theme-btn:hover {
+  background: var(--bg-hover);
+  color: var(--primary);
+}
+
+body.dark-theme .navbar-toggler {
+  border-color: var(--border-light);
+  color: var(--text);
+}
+
+body.dark-theme .navbar-toggler:focus {
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.2);
+}
+
+/* ============================================================
+   HERO SECTION — Gradient background with glow
+   ============================================================ */
+body.dark-theme .hero-section {
+  background: linear-gradient(180deg, #0A0A0F 0%, #0D0D18 50%, #0A0A0F 100%);
+  position: relative;
+}
+
+body.dark-theme .hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(45, 212, 191, 0.08) 0%, transparent 60%),
+              radial-gradient(ellipse 60% 40% at 80% 50%, rgba(99, 102, 241, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+body.dark-theme .hero-pattern {
+  background-image: radial-gradient(circle at 1px 1px, rgba(39, 39, 42, 0.5) 1px, transparent 0);
+  opacity: 0.3;
+}
+
+body.dark-theme .floating-element {
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.15) 0%, transparent 70%);
+  opacity: 0.4;
+}
+
+body.dark-theme .hero-badge {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+body.dark-theme .badge-dot {
+  background: var(--primary);
+  box-shadow: 0 0 10px rgba(45, 212, 191, 0.5);
+}
+
+body.dark-theme .hero-title {
+  color: var(--text);
+}
+
+body.dark-theme .gradient-text {
+  background: linear-gradient(135deg, #5EEAD4 0%, #2DD4BF 50%, #14B8A6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.dark-theme .hero-description {
+  color: var(--text-light);
+}
+
+body.dark-theme .feature-item {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+}
+
+body.dark-theme .feature-item:hover {
+  border-color: var(--primary);
+  box-shadow: 0 0 20px rgba(45, 212, 191, 0.1);
+}
+
+body.dark-theme .feature-item span:last-child {
+  color: var(--text);
+}
+
+body.dark-theme .hero-card-main {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  box-shadow: var(--shadow-xl), 0 0 40px rgba(45, 212, 191, 0.05);
+}
+
+body.dark-theme .hero-card-main h3 {
+  color: var(--text);
+}
+
+body.dark-theme .hero-card-main p {
+  color: var(--text-light);
+}
+
+body.dark-theme .card-glow {
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.15) 0%, transparent 70%);
+  opacity: 0.6;
+}
+
+body.dark-theme .stat-value {
+  color: var(--primary);
+  text-shadow: 0 0 20px rgba(45, 212, 191, 0.3);
+}
+
+body.dark-theme .stat-label {
+  color: var(--text-light);
+}
+
+body.dark-theme .floating-badge {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  box-shadow: var(--shadow-lg);
+}
+
+body.dark-theme .badge-icon {
+  background: var(--primary-gradient-soft);
+  color: var(--primary);
+}
+
+body.dark-theme .badge-text strong {
+  color: var(--text);
+}
+
+body.dark-theme .badge-text span {
+  color: var(--text-light);
+}
+
+/* ============================================================
+   CARDS — Elevated with subtle glow
+   ============================================================ */
+body.dark-theme .card-custom {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  box-shadow: var(--shadow-md);
+}
+
+body.dark-theme .card-custom:hover {
+  border-color: var(--border-light);
+  box-shadow: var(--shadow-lg), 0 0 30px rgba(45, 212, 191, 0.05);
+}
+
+body.dark-theme .card-gradient-border {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+}
+
+/* ============================================================
+   SECTION TITLE
+   ============================================================ */
+body.dark-theme .section-title h2 {
+  color: var(--text);
+}
+
+body.dark-theme .section-title p {
+  color: var(--text-light);
+}
+
+body.dark-theme .section-subtitle {
+  background: var(--primary-gradient-soft);
+  color: var(--primary);
+}
+
+/* ============================================================
+   STATS — Pop with accent color
+   ============================================================ */
+body.dark-theme .stats-section {
+  background: var(--bg-light);
+}
+
+body.dark-theme .stat-card {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  box-shadow: var(--shadow-md);
+}
+
+body.dark-theme .stat-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-lg), 0 0 30px rgba(45, 212, 191, 0.08);
+}
+
+body.dark-theme .stat-card h2 {
+  color: var(--primary);
+  text-shadow: 0 0 20px rgba(45, 212, 191, 0.3);
+}
+
+body.dark-theme .stat-card p {
+  color: var(--text-light);
+}
+
+body.dark-theme .stat-icon {
+  background: var(--primary-gradient);
+  box-shadow: 0 0 20px rgba(45, 212, 191, 0.3);
+}
+
+/* ============================================================
+   SERVICES — Elevated cards with glow on hover
+   ============================================================ */
+body.dark-theme .services-section {
+  background: var(--bg-light);
+}
+
+body.dark-theme .service-card {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  box-shadow: var(--shadow-md);
+}
+
+body.dark-theme .service-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-lg), 0 0 30px rgba(45, 212, 191, 0.08);
+  transform: translateY(-8px);
+}
+
+body.dark-theme .service-card h3 {
+  color: var(--text);
+}
+
+body.dark-theme .service-card p {
+  color: var(--text-light);
+}
+
+body.dark-theme .service-icon {
+  background: var(--primary-gradient);
+  box-shadow: 0 0 20px rgba(45, 212, 191, 0.2);
+}
+
+body.dark-theme .card-number {
+  color: var(--gray-800);
+}
+
+body.dark-theme .service-card:hover .card-number {
+  color: rgba(45, 212, 191, 0.15);
+}
+
+body.dark-theme .service-link {
+  color: var(--primary);
+}
+
+body.dark-theme .service-link:hover {
+  color: var(--primary-light);
+}
+
+/* ============================================================
+   DOCTORS — Gradient ring avatar, elevated card
+   ============================================================ */
+body.dark-theme .doctors-section {
+  background: var(--bg);
+}
+
+body.dark-theme .doctor-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition);
+}
+
+body.dark-theme .doctor-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-lg), 0 0 30px rgba(45, 212, 191, 0.08);
+  transform: translateY(-6px);
+}
+
+body.dark-theme .doctor-card h3 {
+  color: var(--text);
+}
+
+body.dark-theme .doctor-card p {
+  color: var(--text-light);
+}
+
+body.dark-theme .avatar {
+  background: var(--primary-gradient);
+  box-shadow: 0 0 20px rgba(45, 212, 191, 0.3);
+}
+
+body.dark-theme .avatar-ring {
+  border-color: var(--primary);
+  opacity: 0.3;
+}
+
+body.dark-theme .specialty-badge {
+  background: var(--primary-gradient-soft);
+  color: var(--primary);
+}
+
+body.dark-theme .experience {
+  color: var(--text-light);
+}
+
+body.dark-theme .experience svg {
+  color: var(--primary);
+}
+
+body.dark-theme .rating svg {
+  color: var(--gray-700);
+}
+
+body.dark-theme .rating svg.filled {
+  color: var(--accent);
+  filter: drop-shadow(0 0 4px rgba(251, 191, 36, 0.4));
+}
+
+/* ============================================================
+   TESTIMONIALS — Elevated card with accent quote
+   ============================================================ */
+body.dark-theme .testimonials-section {
+  background: var(--bg-light);
+}
+
+body.dark-theme .testimonial-card {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  box-shadow: var(--shadow-md);
+}
+
+body.dark-theme .testimonial-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-lg), 0 0 30px rgba(45, 212, 191, 0.08);
+}
+
+body.dark-theme .testimonial-card p {
+  color: var(--text-light);
+}
+
+body.dark-theme .testimonial-card h4 {
+  color: var(--text);
+}
+
+body.dark-theme .quote-icon {
+  background: var(--primary-gradient-soft);
+  color: var(--primary);
+}
+
+body.dark-theme .review {
+  color: var(--text-light);
+}
+
+body.dark-theme .stars svg {
+  color: var(--accent);
+  filter: drop-shadow(0 0 4px rgba(251, 191, 36, 0.3));
+}
+
+body.dark-theme .patient-info h5 {
+  color: var(--text);
+}
+
+body.dark-theme .patient-info small {
+  color: var(--text-muted);
+}
+
+/* ============================================================
+   WHY CHOOSE — Feature cards
+   ============================================================ */
+body.dark-theme .why-section {
+  background: var(--bg);
+}
+
+body.dark-theme .feature-card {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  box-shadow: var(--shadow-md);
+}
+
+body.dark-theme .feature-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-lg), 0 0 30px rgba(45, 212, 191, 0.08);
+}
+
+body.dark-theme .feature-card h4 {
+  color: var(--text);
+}
+
+body.dark-theme .feature-card p {
+  color: var(--text-light);
+}
+
+body.dark-theme .feature-icon {
+  background: var(--primary-gradient);
+  box-shadow: 0 0 20px rgba(45, 212, 191, 0.2);
+}
+
+body.dark-theme .feature-number {
+  color: var(--gray-800);
+}
+
+body.dark-theme .feature-card:hover .feature-number {
+  color: rgba(45, 212, 191, 0.15);
+}
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+body.dark-theme .about-section {
+  background: var(--bg-light);
+}
+
+body.dark-theme .about-content h2 {
+  color: var(--text);
+}
+
+body.dark-theme .about-content p {
+  color: var(--text-light);
+}
+
+body.dark-theme .about-card {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  box-shadow: var(--shadow-xl);
+}
+
+body.dark-theme .about-card-bg {
+  background: var(--primary-gradient-soft);
+  opacity: 0.2;
+}
+
+body.dark-theme .about-card-content h3 {
+  color: var(--text);
+}
+
+body.dark-theme .about-card-content p {
+  color: var(--text-light);
+}
+
+body.dark-theme .about-experience {
+  background: var(--primary-gradient);
+  box-shadow: var(--shadow-primary);
+}
+
+body.dark-theme .feature-item {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+}
+
+body.dark-theme .feature-item:hover {
+  background: var(--primary-gradient-soft);
+  border-color: var(--primary);
+}
+
+body.dark-theme .feature-item span:last-child {
+  color: var(--text);
+}
+
+/* ============================================================
+   CONTACT — Dark inputs with accent glow
+   ============================================================ */
+body.dark-theme .contact-section {
+  background: var(--bg);
+}
+
+body.dark-theme .contact-box {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  box-shadow: var(--shadow-md);
+}
+
+body.dark-theme .contact-box:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-lg), 0 0 30px rgba(45, 212, 191, 0.08);
+}
+
+body.dark-theme .contact-box h4 {
+  color: var(--text);
+}
+
+body.dark-theme .contact-box p {
+  color: var(--text-light);
+}
+
+body.dark-theme .contact-icon {
+  background: var(--primary-gradient);
+  box-shadow: 0 0 20px rgba(45, 212, 191, 0.2);
+}
+
+body.dark-theme .contact-form-wrapper {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  box-shadow: var(--shadow-md);
+}
+
+body.dark-theme .form-header h3 {
+  color: var(--text);
+}
+
+body.dark-theme .form-header p {
+  color: var(--text-light);
+}
+
+body.dark-theme .form-group label {
+  color: var(--text);
+}
+
+body.dark-theme .form-group input,
+body.dark-theme .form-group textarea {
+  background: var(--bg);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+body.dark-theme .form-group input::placeholder,
+body.dark-theme .form-group textarea::placeholder {
+  color: var(--text-muted);
+}
+
+body.dark-theme .form-group input:focus,
+body.dark-theme .form-group textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.15), 0 0 20px rgba(45, 212, 191, 0.1);
+}
+
+body.dark-theme .alert-success {
+  background: rgba(45, 212, 191, 0.1);
+  border-color: rgba(45, 212, 191, 0.3);
+  color: #5EEAD4;
+}
+
+body.dark-theme .map-wrapper {
+  border-color: var(--border);
+  box-shadow: var(--shadow-lg);
+}
+
+body.dark-theme .map-wrapper iframe {
+  filter: grayscale(0.3) contrast(1.05);
+}
+
+/* ============================================================
+   FOOTER — Dark gradient with subtle top border
+   ============================================================ */
+body.dark-theme .footer {
+  background: linear-gradient(180deg, #0A0A0F 0%, #08080D 100%);
+  border-top: 1px solid var(--border);
+}
+
+body.dark-theme .footer h4 {
+  color: var(--text);
+}
+
+body.dark-theme .footer p,
+body.dark-theme .footer a {
+  color: var(--text-light);
+}
+
+body.dark-theme .footer a:hover {
+  color: var(--primary);
+}
+
+body.dark-theme .footer-links a {
+  color: var(--text-light);
+}
+
+body.dark-theme .footer-links a:hover {
+  color: var(--primary);
+}
+
+body.dark-theme .footer-contact li {
+  color: var(--text-light);
+}
+
+body.dark-theme .footer-contact svg {
+  color: var(--primary);
+}
+
+body.dark-theme .social-icons a {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+body.dark-theme .social-icons a:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--bg);
+  box-shadow: 0 0 20px rgba(45, 212, 191, 0.3);
+  transform: translateY(-4px);
+}
+
+body.dark-theme .footer-bottom {
+  border-top-color: var(--border);
+}
+
+body.dark-theme .footer-bottom p {
+  color: var(--text-muted);
+}
+
+/* ============================================================
+   BUTTONS — Enhanced for dark mode
+   ============================================================ */
+body.dark-theme .btn-outline {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+body.dark-theme .btn-outline:hover {
+  background: var(--primary);
+  color: var(--bg);
+  box-shadow: 0 0 20px rgba(45, 212, 191, 0.3);
+}
+
+body.dark-theme .btn-primary {
+  box-shadow: var(--shadow-primary), 0 0 20px rgba(45, 212, 191, 0.2);
+}
+
+body.dark-theme .btn-primary:hover {
+  box-shadow: 0 15px 35px -5px rgba(45, 212, 191, 0.4), 0 0 30px rgba(45, 212, 191, 0.2);
+}
+
+body.dark-theme .btn-accent {
+  box-shadow: var(--shadow-accent), 0 0 20px rgba(251, 191, 36, 0.2);
+}
+
+body.dark-theme .btn-white {
+  background: var(--bg-elevated);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+body.dark-theme .btn-white:hover {
+  background: var(--bg-hover);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ============================================================
+   SCROLL TOP
+   ============================================================ */
+body.dark-theme .scroll-top,
+body.dark-theme .scroll-btn {
+  background: var(--primary-gradient);
+  box-shadow: var(--shadow-primary), 0 0 20px rgba(45, 212, 191, 0.3);
+}
+
+body.dark-theme .scroll-top:hover,
+body.dark-theme .scroll-btn:hover {
+  box-shadow: 0 15px 35px -5px rgba(45, 212, 191, 0.4), 0 0 30px rgba(45, 212, 191, 0.3);
+}
+
+/* ============================================================
+   WHATSAPP FLOAT
+   ============================================================ */
+body.dark-theme .whatsapp-float {
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3), 0 0 20px rgba(37, 211, 102, 0.15);
+}
+
+/* ============================================================
+   LOADING SPINNER
+   ============================================================ */
+body.dark-theme .spinner {
+  border-color: var(--border);
+  border-top-color: var(--primary);
+}
+
+/* ============================================================
+   BADGE
+   ============================================================ */
+body.dark-theme .badge-custom {
+  background: var(--primary-gradient-soft);
+  color: var(--primary);
+}
+
+/* ============================================================
+   GLASS EFFECT — Dark mode
+   ============================================================ */
+body.dark-theme .glass {
+  background: rgba(26, 26, 37, 0.8);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--border);
+}
+
+/* ============================================================
+   SELECTION — Dark mode
+   ============================================================ */
+body.dark-theme ::selection {
+  background: rgba(45, 212, 191, 0.3);
+  color: var(--text);
+}
+
+/* ============================================================
+   SCROLLBAR — Dark mode
+   ============================================================ */
+body.dark-theme ::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+body.dark-theme ::-webkit-scrollbar-thumb {
+  background: var(--gray-700);
+  border: 2px solid var(--bg);
+}
+
+body.dark-theme ::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* ============================================================
+   FOCUS STATES — Accessibility
+   ============================================================ */
+body.dark-theme *:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   SECTION BADGE — Dark mode
+   ============================================================ */
+body.dark-theme .section-badge {
+  background: var(--primary-gradient);
+  box-shadow: 0 0 15px rgba(45, 212, 191, 0.2);
+}
+
+/* ============================================================
+   BACK TO TOP — Dark mode
+   ============================================================ */
+body.dark-theme .back-to-top {
+  background: var(--primary-gradient);
+  box-shadow: var(--shadow-primary), 0 0 20px rgba(45, 212, 191, 0.3);
+}
+
+body.dark-theme .back-to-top:hover {
+  box-shadow: 0 15px 35px -5px rgba(45, 212, 191, 0.4), 0 0 30px rgba(45, 212, 191, 0.3);
+}

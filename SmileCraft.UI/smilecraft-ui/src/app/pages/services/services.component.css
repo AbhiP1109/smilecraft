@@ -1,0 +1,242 @@
+/* ============================================================
+   Services Section — Mobile First
+   ============================================================ */
+
+.services-section {
+  padding: 80px 0;
+  background: var(--bg-light);
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: var(--primary-gradient);
+  color: var(--white);
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.section-header h2 {
+  font-size: clamp(1.75rem, 4.5vw, 2.625rem);
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.section-header p {
+  color: var(--text-light);
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  line-height: 1.7;
+}
+
+/* Grid: 3 cols → 2 tablet → 1 mobile */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* Service Card */
+.service-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 36px 28px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
+
+.card-number {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--gray-100);
+  line-height: 1;
+  transition: color var(--transition);
+}
+
+.service-card:hover .card-number {
+  color: var(--primary-gradient-soft);
+}
+
+.service-icon {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 24px;
+  background: var(--primary-gradient);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  transition: transform var(--transition);
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1);
+}
+
+.service-icon svg {
+  width: 36px;
+  height: 36px;
+}
+
+.service-card h3 {
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.service-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  margin-bottom: 20px;
+}
+
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: gap var(--transition-fast);
+  min-height: 44px;
+}
+
+.service-link:hover {
+  gap: 12px;
+}
+
+.service-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ============================================================
+   Tablet (≤992px): 2 columns
+   ============================================================ */
+@media (max-width: 992px) {
+  .services-section {
+    padding: 60px 0;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+/* ============================================================
+   Mobile (≤576px): 1 column
+   ============================================================ */
+@media (max-width: 576px) {
+  .services-section {
+    padding: 50px 0;
+  }
+
+  .section-header {
+    margin-bottom: 30px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .service-card {
+    padding: 28px 22px;
+  }
+
+  .card-number {
+    font-size: 2.5rem;
+  }
+
+  .service-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 20px;
+  }
+
+  .service-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* ============================================================
+   DARK THEME — Services Section
+   ============================================================ */
+body.dark-theme .services-section {
+  background: var(--bg-light);
+}
+
+body.dark-theme .service-card {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  box-shadow: var(--shadow-md);
+}
+
+body.dark-theme .service-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-lg), 0 0 30px rgba(45, 212, 191, 0.08);
+  transform: translateY(-8px);
+}
+
+body.dark-theme .service-card h3 {
+  color: var(--text);
+}
+
+body.dark-theme .service-card p {
+  color: var(--text-light);
+}
+
+body.dark-theme .service-icon {
+  background: var(--primary-gradient);
+  box-shadow: 0 0 20px rgba(45, 212, 191, 0.2);
+}
+
+body.dark-theme .card-number {
+  color: var(--gray-800);
+}
+
+body.dark-theme .service-card:hover .card-number {
+  color: rgba(45, 212, 191, 0.15);
+}
+
+body.dark-theme .service-link {
+  color: var(--primary);
+}
+
+body.dark-theme .service-link:hover {
+  color: var(--primary-light);
+}

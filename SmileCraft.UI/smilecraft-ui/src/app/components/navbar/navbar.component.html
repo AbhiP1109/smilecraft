@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold logo" routerLink="/">
+      <img [src]="logo" [alt]="clinicName" class="navbar-logo" onerror="this.style.display='none'">
+      <span>🦷 {{ clinicName }}</span>
+    </a>
+
+    <button class="navbar-toggler"
+            type="button"
+            (click)="toggleMenu()"
+            [attr.aria-expanded]="isMenuOpen"
+            aria-controls="mainNavbar"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNavbar" [class.show]="isMenuOpen">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="active" (click)="closeMenu()">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/services" routerLinkActive="active" (click)="closeMenu()">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a>
+        </li>
+        <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+          <a class="btn btn-primary px-4" routerLink="/contact" (click)="closeMenu()">Contact Us</a>
+        </li>
+        <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+          <button class="theme-btn" (click)="toggleTheme()" [attr.aria-label]="isDark ? 'Switch to light theme' : 'Switch to dark theme'">
+            {{ isDark ? '☀️' : '🌙' }}
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

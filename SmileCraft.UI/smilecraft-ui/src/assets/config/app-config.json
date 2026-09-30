@@ -1,0 +1,39 @@
+{
+  "_comment": "SmileCraft Dental Clinic - Dynamic Configuration File. Edit this file to update clinic name, contact details, social links, hours, map, and SEO without rebuilding the app. All fields are optional - missing fields fall back to defaults.",
+  "clinic": {
+    "name": "SmileCraft Dental Clinic",
+    "tagline": "Your Smile, Our Priority",
+    "description": "Premium dental care with a gentle touch. We offer comprehensive dental services in a comfortable, modern environment.",
+    "logo": "assets/images/logo.svg",
+    "favicon": "favicon.ico"
+  },
+  "contact": {
+    "address": "Bus Stop, Kotoli Road, near Porle,Kolhapur, Maharashtra 416229",
+    "phone": "+91 91302 36161",
+    "phoneSecondary": "+91 22 4890 1234",
+    "email": "hello@smilecraft.in",
+    "emergencyPhone": "+91 98765 43211"
+  },
+  "social": {
+    "facebook": "https://facebook.com/smilecraft",
+    "instagram": "https://www.instagram.com/_smilecraft_dentalclinic",
+    "twitter": "https://twitter.com/smilecraft",
+    "linkedin": "https://linkedin.com/company/smilecraft",
+    "youtube": "https://youtube.com/@smilecraft",
+    "whatsapp": "https://wa.me/9130236161"
+  },
+  "hours": [
+    { "days": "Monday - Friday", "time": "9:00 AM - 8:00 PM" },
+    { "days": "Saturday", "time": "9:00 AM - 6:00 PM" },
+    { "days": "Sunday", "time": "10:00 AM - 2:00 PM" }
+  ],
+  "map": {
+    "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.36722472154!2d74.13536140000001!3d16.7583958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1ab05377717d7%3A0xc4e9404c7bfbca50!2sSmile%20craft%20Advance%20Dental%20Clinic!5e0!3m2!1sen!2sin!4v1790771366256!5m2!1sen!2sin",
+    "link": "https://maps.app.goo.gl/CJMQwQEKQCKSxytJA"
+  },
+  "seo": {
+    "title": "SmileCraft Dental Clinic | Best Dentist in Kolhapur",
+    "description": "SmileCraft Dental Clinic offers premium dental care in Kolhapur. Expert dentists, modern equipment, gentle care. Book your visit today!",
+    "keywords": "dental clinic Kolhapur, best dentist, teeth cleaning, root canal, dental implant"
+  }
+}

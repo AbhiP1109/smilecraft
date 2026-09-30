@@ -1,0 +1,245 @@
+/* ============================================================
+   Testimonials Section — Mobile First
+   ============================================================ */
+
+.testimonials-section {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: var(--primary-gradient);
+  color: var(--white);
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.section-header h2 {
+  font-size: clamp(1.75rem, 4.5vw, 2.625rem);
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.section-header p {
+  max-width: 650px;
+  margin: auto;
+  color: var(--text-light);
+  line-height: 1.8;
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+}
+
+/* Grid: 3 cols → 2 tablet → 1 mobile */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* Card */
+.testimonial-card {
+  position: relative;
+  padding: 32px 28px;
+  border-radius: var(--radius-xl);
+  background: var(--white);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
+  height: 100%;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
+
+.quote-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--primary-gradient-soft);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.quote-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.review {
+  margin: 0 0 20px;
+  color: var(--gray-600);
+  line-height: 1.8;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  min-height: 110px;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.stars svg {
+  width: 20px;
+  height: 20px;
+  color: var(--accent);
+}
+
+/* Patient */
+.patient {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--primary-gradient);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.patient-info h5 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.patient-info small {
+  color: var(--gray-500);
+  font-size: 0.85rem;
+}
+
+/* ============================================================
+   Tablet (≤992px): 2 columns
+   ============================================================ */
+@media (max-width: 992px) {
+  .testimonials-section {
+    padding: 60px 0;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+/* ============================================================
+   Mobile (≤576px): 1 column
+   ============================================================ */
+@media (max-width: 576px) {
+  .testimonials-section {
+    padding: 50px 0;
+  }
+
+  .section-header {
+    margin-bottom: 30px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .testimonial-card {
+    padding: 24px 20px;
+  }
+
+  .review {
+    min-height: auto;
+  }
+
+  .quote-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 16px;
+  }
+
+  .quote-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .avatar {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
+}
+
+/* ============================================================
+   DARK THEME — Testimonials Section
+   ============================================================ */
+body.dark-theme .testimonials-section {
+  background: var(--bg-light);
+}
+
+body.dark-theme .testimonial-card {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  box-shadow: var(--shadow-md);
+}
+
+body.dark-theme .testimonial-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-lg), 0 0 30px rgba(45, 212, 191, 0.08);
+}
+
+body.dark-theme .testimonial-card p {
+  color: var(--text-light);
+}
+
+body.dark-theme .testimonial-card h4 {
+  color: var(--text);
+}
+
+body.dark-theme .quote-icon {
+  background: var(--primary-gradient-soft);
+  color: var(--primary);
+}
+
+body.dark-theme .review {
+  color: var(--text-light);
+}
+
+body.dark-theme .stars svg {
+  color: var(--accent);
+  filter: drop-shadow(0 0 4px rgba(251, 191, 36, 0.3));
+}
+
+body.dark-theme .patient-info h5 {
+  color: var(--text);
+}
+
+body.dark-theme .patient-info small {
+  color: var(--text-muted);
+}

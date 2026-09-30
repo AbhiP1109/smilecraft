@@ -1,0 +1,39 @@
+{
+  "_comment": "SmileCraft Dental Clinic - Dynamic Configuration File. Edit this file to update clinic name, contact details, social links, hours, map, and SEO without rebuilding the app. All fields are optional - missing fields fall back to defaults.",
+  "clinic": {
+    "name": "SmileCraft Dental Clinic",
+    "tagline": "Your Smile, Our Priority",
+    "description": "Premium dental care with a gentle touch. We offer comprehensive dental services in a comfortable, modern environment.",
+    "logo": "assets/images/logo.svg",
+    "favicon": "favicon.ico"
+  },
+  "contact": {
+    "address": "123 Dental Street, Andheri West, Mumbai, Maharashtra 400053",
+    "phone": "+91 98765 43210",
+    "phoneSecondary": "+91 22 4890 1234",
+    "email": "hello@smilecraft.in",
+    "emergencyPhone": "+91 98765 43211"
+  },
+  "social": {
+    "facebook": "https://facebook.com/smilecraft",
+    "instagram": "https://instagram.com/smilecraft",
+    "twitter": "https://twitter.com/smilecraft",
+    "linkedin": "https://linkedin.com/company/smilecraft",
+    "youtube": "https://youtube.com/@smilecraft",
+    "whatsapp": "https://wa.me/919876543210"
+  },
+  "hours": [
+    { "days": "Monday - Friday", "time": "9:00 AM - 8:00 PM" },
+    { "days": "Saturday", "time": "9:00 AM - 6:00 PM" },
+    { "days": "Sunday", "time": "10:00 AM - 2:00 PM" }
+  ],
+  "map": {
+    "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.1160982327!2d72.74109995!3d19.0821978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA0JzU1LjkiTiA3MsKwNTMnMDMuNiJF!5e0!3m2!1sen!2sin!4v1234567890",
+    "link": "https://maps.google.com/?q=SmileCraft+Dental+Clinic+Mumbai"
+  },
+  "seo": {
+    "title": "SmileCraft Dental Clinic | Best Dentist in Mumbai",
+    "description": "SmileCraft Dental Clinic offers premium dental care in Mumbai. Expert dentists, modern equipment, gentle care. Book your visit today!",
+    "keywords": "dental clinic mumbai, best dentist, teeth cleaning, root canal, dental implant"
+  }
+}

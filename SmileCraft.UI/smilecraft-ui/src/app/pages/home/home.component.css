@@ -1,0 +1,559 @@
+/* ============================================================
+   Hero Section — Mobile First
+   ============================================================ */
+
+.hero-section {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--bg-light) 0%, var(--white) 100%);
+  padding: 80px 0 120px;
+  overflow: hidden;
+}
+
+/* Background Pattern */
+.hero-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, var(--border) 1px, transparent 0);
+  background-size: 40px 40px;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* Floating Elements */
+.floating-element {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--primary-gradient-soft);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.floating-1 {
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  right: -50px;
+}
+
+.floating-2 {
+  width: 200px;
+  height: 200px;
+  bottom: 10%;
+  left: -80px;
+}
+
+.floating-3 {
+  width: 150px;
+  height: 150px;
+  top: 40%;
+  right: 10%;
+}
+
+/* Layout */
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-visual {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+}
+
+/* Badge */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: clamp(0.8rem, 2vw, 0.95rem);
+  color: var(--primary);
+  margin-bottom: 25px;
+  box-shadow: var(--shadow-sm);
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Title */
+.hero-title {
+  font-size: clamp(2.25rem, 6vw, 4rem);
+  line-height: 1.15;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+.gradient-text {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Description */
+.hero-description {
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 25px;
+  max-width: 540px;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 35px;
+}
+
+.hero-buttons .btn {
+  min-width: 180px;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Features */
+.hero-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 35px 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  transition: all var(--transition);
+  cursor: default;
+}
+
+.feature-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+}
+
+.feature-icon {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #22c55e;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.feature-item span:last-child {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+/* Hero Visual Card */
+.hero-card-main {
+  position: relative;
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border);
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.card-glow {
+  position: absolute;
+  inset: -20px;
+  background: var(--primary-gradient-soft);
+  border-radius: var(--radius-xl);
+  z-index: -1;
+  filter: blur(40px);
+  opacity: 0.5;
+}
+
+.card-content {
+  text-align: center;
+}
+
+.card-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background: var(--primary-gradient);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+}
+
+.card-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+.hero-card-main h3 {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  margin-bottom: 8px;
+}
+
+.hero-card-main p {
+  color: var(--text-light);
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  margin-bottom: 24px;
+}
+
+.card-stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-value {
+  display: block;
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+/* Floating Badges */
+.floating-badge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 12px 18px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+  animation: float 3s ease-in-out infinite;
+}
+
+.badge-top {
+  top: -20px;
+  right: -10px;
+}
+
+.badge-bottom {
+  bottom: -20px;
+  left: -10px;
+  animation-delay: 1.5s;
+}
+
+.badge-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--primary-gradient-soft);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.badge-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.badge-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge-text strong {
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.badge-text span {
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+/* Wave Divider */
+.hero-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  line-height: 0;
+  z-index: 1;
+}
+
+.hero-wave svg {
+  width: 100%;
+  height: 80px;
+  display: block;
+}
+
+/* ============================================================
+   Tablet (≤992px)
+   ============================================================ */
+@media (max-width: 992px) {
+  .hero-section {
+    padding: 60px 0 100px;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-description {
+    max-width: 100%;
+  }
+
+  .hero-features {
+    justify-content: center;
+  }
+
+  .feature-item {
+    flex: 1 1 calc(50% - 15px);
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    width: 100%;
+  }
+
+  .floating-element {
+    display: none;
+  }
+}
+
+/* ============================================================
+   Mobile (≤768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 40px 0 80px;
+    min-height: auto;
+  }
+
+  .hero-features {
+    flex-direction: column;
+  }
+
+  .feature-item {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 14px 18px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  .hero-card-main {
+    padding: 28px 20px;
+  }
+
+  .card-stats {
+    gap: 20px;
+  }
+
+  .floating-badge {
+    display: none;
+  }
+
+  .hero-wave svg {
+    height: 50px;
+  }
+}
+
+/* ============================================================
+   Small Mobile (≤480px)
+   ============================================================ */
+@media (max-width: 480px) {
+  .hero-badge {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+  }
+
+  .card-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .card-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* ============================================================
+   DARK THEME — Hero Section
+   ============================================================ */
+body.dark-theme .hero-section {
+  background: linear-gradient(180deg, #0A0A0F 0%, #0D0D18 50%, #0A0A0F 100%);
+  position: relative;
+}
+
+body.dark-theme .hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(45, 212, 191, 0.08) 0%, transparent 60%),
+              radial-gradient(ellipse 60% 40% at 80% 50%, rgba(99, 102, 241, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+body.dark-theme .hero-pattern {
+  background-image: radial-gradient(circle at 1px 1px, rgba(39, 39, 42, 0.5) 1px, transparent 0);
+  opacity: 0.3;
+}
+
+body.dark-theme .floating-element {
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.15) 0%, transparent 70%);
+  opacity: 0.4;
+}
+
+body.dark-theme .hero-badge {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+body.dark-theme .badge-dot {
+  background: var(--primary);
+  box-shadow: 0 0 10px rgba(45, 212, 191, 0.5);
+}
+
+body.dark-theme .hero-title {
+  color: var(--text);
+}
+
+body.dark-theme .gradient-text {
+  background: linear-gradient(135deg, #5EEAD4 0%, #2DD4BF 50%, #14B8A6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.dark-theme .hero-description {
+  color: var(--text-light);
+}
+
+body.dark-theme .feature-item {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+}
+
+body.dark-theme .feature-item:hover {
+  border-color: var(--primary);
+  box-shadow: 0 0 20px rgba(45, 212, 191, 0.1);
+}
+
+body.dark-theme .feature-item span:last-child {
+  color: var(--text);
+}
+
+body.dark-theme .hero-card-main {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  box-shadow: var(--shadow-xl), 0 0 40px rgba(45, 212, 191, 0.05);
+}
+
+body.dark-theme .hero-card-main h3 {
+  color: var(--text);
+}
+
+body.dark-theme .hero-card-main p {
+  color: var(--text-light);
+}
+
+body.dark-theme .card-glow {
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.15) 0%, transparent 70%);
+  opacity: 0.6;
+}
+
+body.dark-theme .stat-value {
+  color: var(--primary);
+  text-shadow: 0 0 20px rgba(45, 212, 191, 0.3);
+}
+
+body.dark-theme .stat-label {
+  color: var(--text-light);
+}
+
+body.dark-theme .floating-badge {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  box-shadow: var(--shadow-lg);
+}
+
+body.dark-theme .badge-icon {
+  background: var(--primary-gradient-soft);
+  color: var(--primary);
+}
+
+body.dark-theme .badge-text strong {
+  color: var(--text);
+}
+
+body.dark-theme .badge-text span {
+  color: var(--text-light);
+}

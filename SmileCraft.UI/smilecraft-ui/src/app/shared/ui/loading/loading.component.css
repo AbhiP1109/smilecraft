@@ -1,0 +1,30 @@
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.spinner {
+  width: 45px;
+  height: 45px;
+  border: 5px solid #ddd;
+  border-top: 5px solid var(--primary);
+  border-radius: 50%;
+  animation: spin .8s linear infinite;
+}
+
+@keyframes spin {
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================================================
+   DARK THEME — Loading Spinner
+   ============================================================ */
+body.dark-theme .spinner {
+  border-color: var(--border);
+  border-top-color: var(--primary);
+}

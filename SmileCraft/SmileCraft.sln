@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmileCraft.API", "SmileCraft.API\SmileCraft.API.csproj", "{70F64A50-478E-447B-85F0-405BEDC548AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmileCraft.Domain", "SmileCraft.Domain\SmileCraft.Domain.csproj", "{185EA800-3FDD-4A45-93A1-D6B6FFA53A70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmileCraft.Application", "SmileCraft.Application\SmileCraft.Application.csproj", "{9D215460-7BEA-4747-8515-49B765522FE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmileCraft.Infrastructure", "SmileCraft.Infrastructure\SmileCraft.Infrastructure.csproj", "{95C2E9E7-C02F-456E-A038-F20982BD4FAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmileCraft.Shared", "SmileCraft.Shared\SmileCraft.Shared.csproj", "{109D5C8D-7630-49CE-A569-08159D482752}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70F64A50-478E-447B-85F0-405BEDC548AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70F64A50-478E-447B-85F0-405BEDC548AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70F64A50-478E-447B-85F0-405BEDC548AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70F64A50-478E-447B-85F0-405BEDC548AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{185EA800-3FDD-4A45-93A1-D6B6FFA53A70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{185EA800-3FDD-4A45-93A1-D6B6FFA53A70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{185EA800-3FDD-4A45-93A1-D6B6FFA53A70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{185EA800-3FDD-4A45-93A1-D6B6FFA53A70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D215460-7BEA-4747-8515-49B765522FE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D215460-7BEA-4747-8515-49B765522FE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D215460-7BEA-4747-8515-49B765522FE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D215460-7BEA-4747-8515-49B765522FE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95C2E9E7-C02F-456E-A038-F20982BD4FAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95C2E9E7-C02F-456E-A038-F20982BD4FAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95C2E9E7-C02F-456E-A038-F20982BD4FAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95C2E9E7-C02F-456E-A038-F20982BD4FAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{109D5C8D-7630-49CE-A569-08159D482752}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{109D5C8D-7630-49CE-A569-08159D482752}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{109D5C8D-7630-49CE-A569-08159D482752}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{109D5C8D-7630-49CE-A569-08159D482752}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SmileCraft.Application\SmileCraft.Application.csproj" />
+    <ProjectReference Include="..\SmileCraft.Domain\SmileCraft.Domain.csproj" />
+    <ProjectReference Include="..\SmileCraft.Infrastructure\SmileCraft.Infrastructure.csproj" />
+    <ProjectReference Include="..\SmileCraft.Shared\SmileCraft.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

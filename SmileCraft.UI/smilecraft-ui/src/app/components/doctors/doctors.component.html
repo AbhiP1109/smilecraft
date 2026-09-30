@@ -1,0 +1,14 @@
+<section class="doctors-section">
+  <div class="container">
+    <app-section-title subtitle="Our Doctors"
+                       title="Meet Our Expert Dentists"
+                       description="Our experienced dentists provide world-class dental care using modern technology.">
+    </app-section-title>
+
+    <div class="doctor-grid">
+      @for(doctor of data.doctors; track doctor.id){
+        <app-doctor-card [doctor]="doctor"></app-doctor-card>
+      }
+    </div>
+  </div>
+</section>

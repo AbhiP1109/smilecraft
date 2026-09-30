@@ -1,0 +1,75 @@
+/* Service Card Modern */
+
+.service-card-modern {
+  text-align: center;
+  padding: 20px;
+}
+
+.service-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 20px;
+  background: var(--primary-gradient-soft);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+}
+
+.service-icon svg {
+  width: 32px;
+  height: 32px;
+  color: var(--primary);
+  transition: all var(--transition);
+}
+
+.service-card-modern:hover .service-icon {
+  background: var(--primary-gradient);
+  transform: scale(1.05);
+}
+
+.service-card-modern:hover .service-icon svg {
+  color: var(--white);
+}
+
+.service-card-modern h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: 12px;
+}
+
+.service-card-modern p {
+  color: var(--gray-500);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* ============================================================
+   DARK THEME — Service Card Modern
+   ============================================================ */
+body.dark-theme .service-card-modern h3 {
+  color: var(--text);
+}
+
+body.dark-theme .service-card-modern p {
+  color: var(--text-light);
+}
+
+body.dark-theme .service-icon {
+  background: var(--primary-gradient-soft);
+}
+
+body.dark-theme .service-icon svg {
+  color: var(--primary);
+}
+
+body.dark-theme .service-card-modern:hover .service-icon {
+  background: var(--primary-gradient);
+  box-shadow: 0 0 20px rgba(45, 212, 191, 0.2);
+}
+
+body.dark-theme .service-card-modern:hover .service-icon svg {
+  color: var(--white);
+}

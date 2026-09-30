@@ -1,0 +1,42 @@
+# .NET
+**/bin/
+**/obj/
+**/*.user
+**/*.suo
+.vs/
+
+# Angular
+**/node_modules/
+**/dist/
+**/.angular/
+**/.vscode/
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose*.yml
+
+# Documentation
+README.md
+*.md
+
+# Misc
+*.zip
+*.tar.gz

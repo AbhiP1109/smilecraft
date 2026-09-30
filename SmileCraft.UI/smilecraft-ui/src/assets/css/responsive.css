@@ -1,0 +1,183 @@
+/* ============================================================
+   Responsive Styles — Mobile First
+   Breakpoints: 320px, 480px, 576px, 768px, 992px, 1200px
+   ============================================================ */
+
+/* ---------- Base / Small Mobile (≤480px) ---------- */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  section {
+    padding: 50px 0;
+  }
+
+  h1 {
+    font-size: clamp(1.75rem, 7vw, 2.25rem);
+  }
+
+  h2 {
+    font-size: clamp(1.4rem, 5.5vw, 1.75rem);
+  }
+
+  h3 {
+    font-size: clamp(1.1rem, 4vw, 1.35rem);
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ---------- Mobile (≤576px) ---------- */
+@media (max-width: 576px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  h1 {
+    font-size: clamp(1.9rem, 6.5vw, 2.5rem);
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 5vw, 1.875rem);
+  }
+}
+
+/* ---------- Tablet (≤768px) ---------- */
+@media (max-width: 768px) {
+  section {
+    padding: 70px 0;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 2.75rem);
+  }
+
+  h2 {
+    font-size: clamp(1.6rem, 4vw, 2.125rem);
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+/* ---------- Small Desktop (≤992px) ---------- */
+@media (max-width: 992px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  h1 {
+    font-size: clamp(2.25rem, 4.5vw, 3rem);
+  }
+
+  h2 {
+    font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+  }
+}
+
+/* ---------- Desktop (≤1200px) ---------- */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
+/* ============================================================
+   Touch-Friendly Tap Targets (min 44×44px)
+   ============================================================ */
+@media (hover: none), (pointer: coarse) {
+  a,
+  button,
+  .btn,
+  .nav-link,
+  input,
+  textarea,
+  select,
+  .form-control {
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+
+  /* Prevent iOS auto-zoom on input focus */
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+}
+
+/* ============================================================
+   Overflow Prevention
+   ============================================================ */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+img,
+video,
+iframe,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ============================================================
+   Fluid Typography Utilities
+   ============================================================ */
+.text-fluid-sm {
+  font-size: clamp(0.8rem, 2vw, 0.95rem);
+}
+
+.text-fluid-base {
+  font-size: clamp(0.9rem, 2.2vw, 1.05rem);
+}
+
+.text-fluid-lg {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+/* ============================================================
+   Responsive Grid Helpers
+   ============================================================ */
+.grid-responsive {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 576px) {
+  .grid-responsive {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .grid-responsive {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid-responsive {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ============================================================
+   Safe Area (notched devices)
+   ============================================================ */
+@supports (padding: env(safe-area-inset-bottom)) {
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}

@@ -1,0 +1,198 @@
+/* Premium Button Styles */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all var(--transition);
+  border: none;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.btn svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.btn-primary {
+  background: var(--primary-gradient);
+  color: var(--white);
+  box-shadow: var(--shadow-primary);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px -5px rgba(13,148,136,0.45);
+}
+
+.btn-primary:active {
+  transform: translateY(-1px);
+}
+
+.btn-accent {
+  background: var(--accent-gradient);
+  color: var(--white);
+  box-shadow: var(--shadow-accent);
+}
+
+.btn-accent:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px -5px rgba(245,158,11,0.45);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: var(--white);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-primary);
+}
+
+.btn-outline-white {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255,255,255,0.5);
+}
+
+.btn-outline-white:hover {
+  background: var(--white);
+  color: var(--primary);
+  border-color: var(--white);
+  transform: translateY(-3px);
+}
+
+.btn-white {
+  background: var(--white);
+  color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-white:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Ripple effect */
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn:active::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Legacy compatibility */
+.btn-primary-custom {
+  background: var(--primary-gradient);
+  color: white;
+  padding: 14px 32px;
+  border: none;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  transition: all var(--transition);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: var(--shadow-primary);
+}
+
+.btn-primary-custom:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px -5px rgba(13,148,136,0.45);
+}
+
+.btn-outline-custom {
+  padding: 14px 32px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: white;
+  font-weight: 600;
+  transition: all var(--transition);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-outline-custom:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-primary);
+}
+
+/* ============================================================
+   DARK THEME — Buttons
+   ============================================================ */
+body.dark-theme .btn-outline {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+body.dark-theme .btn-outline:hover {
+  background: var(--primary);
+  color: var(--bg);
+  box-shadow: 0 0 20px rgba(45, 212, 191, 0.3);
+}
+
+body.dark-theme .btn-primary {
+  box-shadow: var(--shadow-primary), 0 0 20px rgba(45, 212, 191, 0.2);
+}
+
+body.dark-theme .btn-primary:hover {
+  box-shadow: 0 15px 35px -5px rgba(45, 212, 191, 0.4), 0 0 30px rgba(45, 212, 191, 0.2);
+}
+
+body.dark-theme .btn-accent {
+  box-shadow: var(--shadow-accent), 0 0 20px rgba(251, 191, 36, 0.2);
+}
+
+body.dark-theme .btn-white {
+  background: var(--bg-elevated);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+body.dark-theme .btn-white:hover {
+  background: var(--bg-hover);
+  box-shadow: var(--shadow-lg);
+}
+
+body.dark-theme .btn-outline-custom {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+body.dark-theme .btn-outline-custom:hover {
+  background: var(--primary);
+  color: var(--bg);
+  box-shadow: 0 0 20px rgba(45, 212, 191, 0.3);
+}

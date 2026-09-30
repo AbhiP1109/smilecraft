@@ -1,0 +1,14 @@
+<button [ngClass]="{
+      'btn-primary-custom': type === 'primary',
+      'btn-outline-custom': type === 'outline',
+      'full-width': fullWidth
+    }"
+        (click)="onClick()">
+
+  @if(icon != ''){
+  <i [class]="icon"></i>
+  }
+
+  {{ text }}
+
+</button>

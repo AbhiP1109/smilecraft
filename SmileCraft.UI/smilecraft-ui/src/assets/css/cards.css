@@ -1,0 +1,78 @@
+/* Premium Card Styles */
+
+.card-custom {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-custom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--primary-gradient);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.card-custom:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-custom:hover::before {
+  opacity: 1;
+}
+
+/* Gradient top border variant */
+.card-gradient-border {
+  position: relative;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
+}
+
+.card-gradient-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--primary-gradient);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.card-gradient-border:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ============================================================
+   DARK THEME — Cards
+   ============================================================ */
+body.dark-theme .card-custom {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  box-shadow: var(--shadow-md);
+}
+
+body.dark-theme .card-custom:hover {
+  border-color: var(--border-light);
+  box-shadow: var(--shadow-lg), 0 0 30px rgba(45, 212, 191, 0.05);
+}
+
+body.dark-theme .card-gradient-border {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+}

@@ -1,0 +1,12 @@
+.card-custom {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: var(--shadow-sm);
+  transition: .3s;
+}
+
+  .card-custom:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-md);
+  }

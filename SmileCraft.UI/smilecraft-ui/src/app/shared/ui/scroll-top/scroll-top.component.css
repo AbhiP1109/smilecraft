@@ -1,0 +1,52 @@
+/* Scroll Top Button */
+
+.scroll-btn {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 48px;
+  height: 48px;
+  background: var(--primary-gradient);
+  color: var(--white);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-primary);
+  z-index: 999;
+  transition: all var(--transition);
+  animation: fadeIn 0.3s ease;
+}
+
+.scroll-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px -5px rgba(13,148,136,0.45);
+}
+
+.scroll-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media(max-width:576px) {
+  .scroll-btn {
+    width: 42px;
+    height: 42px;
+    bottom: 20px;
+    left: 20px;
+  }
+}
+
+/* ============================================================
+   DARK THEME — Scroll Top
+   ============================================================ */
+body.dark-theme .scroll-btn {
+  background: var(--primary-gradient);
+  box-shadow: var(--shadow-primary), 0 0 20px rgba(45, 212, 191, 0.3);
+}
+
+body.dark-theme .scroll-btn:hover {
+  box-shadow: 0 15px 35px -5px rgba(45, 212, 191, 0.4), 0 0 30px rgba(45, 212, 191, 0.3);
+}

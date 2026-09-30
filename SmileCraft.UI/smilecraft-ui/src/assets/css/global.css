@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: auto;
+  padding: 0 24px;
+}
+
+section {
+  padding: var(--section-padding);
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Prevent horizontal overflow */
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Touch-friendly tap targets */
+a,
+button,
+.btn,
+input,
+textarea,
+select,
+.nav-link {
+  min-height: 44px;
+  touch-action: manipulation;
+}
+
+/* Prevent iOS auto-zoom on input focus */
+input,
+textarea,
+select {
+  font-size: 16px;
+}
+
+/* Selection */
+::selection {
+  background: var(--primary);
+  color: var(--white);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+/* ============================================================
+   DARK THEME — Global
+   ============================================================ */
+body.dark-theme {
+  background: var(--bg);
+  color: var(--text);
+}
+
+body.dark-theme ::selection {
+  background: rgba(45, 212, 191, 0.3);
+  color: var(--text);
+}
+
+body.dark-theme ::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+body.dark-theme ::-webkit-scrollbar-thumb {
+  background: var(--gray-700);
+  border: 2px solid var(--bg);
+}
+
+body.dark-theme ::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+body.dark-theme *:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+body.dark-theme .glass {
+  background: rgba(26, 26, 37, 0.8);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--border);
+}

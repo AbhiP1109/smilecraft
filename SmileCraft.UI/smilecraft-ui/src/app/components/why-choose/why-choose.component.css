@@ -1,0 +1,212 @@
+/* ============================================================
+   Why Choose Section — Mobile First
+   ============================================================ */
+
+.why-section {
+  padding: 80px 0;
+  background: var(--bg-light);
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: var(--primary-gradient);
+  color: var(--white);
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.section-header h2 {
+  font-size: clamp(1.75rem, 4.5vw, 2.625rem);
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.section-header p {
+  max-width: 650px;
+  margin: auto;
+  color: var(--text-light);
+  line-height: 1.8;
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+}
+
+/* Grid: 3 cols → 2 tablet → 1 mobile */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* Card */
+.feature-card {
+  text-align: center;
+  padding: 36px 28px;
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
+
+.feature-number {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--gray-100);
+  line-height: 1;
+  transition: color var(--transition);
+}
+
+.feature-card:hover .feature-number {
+  color: var(--primary-gradient-soft);
+}
+
+.feature-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 24px;
+  background: var(--primary-gradient);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  transition: transform var(--transition);
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.1);
+}
+
+.feature-icon svg {
+  width: 36px;
+  height: 36px;
+}
+
+.feature-card h4 {
+  font-size: clamp(1.05rem, 2.5vw, 1.35rem);
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.feature-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+/* ============================================================
+   Tablet (≤992px): 2 columns
+   ============================================================ */
+@media (max-width: 992px) {
+  .why-section {
+    padding: 60px 0;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+/* ============================================================
+   Mobile (≤576px): 1 column
+   ============================================================ */
+@media (max-width: 576px) {
+  .why-section {
+    padding: 50px 0;
+  }
+
+  .section-header {
+    margin-bottom: 30px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .feature-card {
+    padding: 28px 22px;
+  }
+
+  .feature-number {
+    font-size: 2rem;
+  }
+
+  .feature-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 20px;
+  }
+
+  .feature-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* ============================================================
+   DARK THEME — Why Choose Section
+   ============================================================ */
+body.dark-theme .why-section {
+  background: var(--bg);
+}
+
+body.dark-theme .feature-card {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  box-shadow: var(--shadow-md);
+}
+
+body.dark-theme .feature-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-lg), 0 0 30px rgba(45, 212, 191, 0.08);
+}
+
+body.dark-theme .feature-card h4 {
+  color: var(--text);
+}
+
+body.dark-theme .feature-card p {
+  color: var(--text-light);
+}
+
+body.dark-theme .feature-icon {
+  background: var(--primary-gradient);
+  box-shadow: 0 0 20px rgba(45, 212, 191, 0.2);
+}
+
+body.dark-theme .feature-number {
+  color: var(--gray-800);
+}
+
+body.dark-theme .feature-card:hover .feature-number {
+  color: rgba(45, 212, 191, 0.15);
+}

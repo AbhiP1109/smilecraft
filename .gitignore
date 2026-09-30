@@ -1,0 +1,50 @@
+# .NET
+**/bin/
+**/obj/
+**/*.user
+**/*.suo
+**/*.userprefs
+.vs/
+*.swp
+
+# Angular
+**/node_modules/
+**/dist/
+**/.angular/
+**/.vscode/
+*.tsbuildinfo
+
+# IDE
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Docker
+*.tar.gz
+
+# Build outputs
+*.zip
+publish/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Misc
+*.cache

@@ -1,0 +1,155 @@
+/* Logo */
+.logo {
+  font-size: clamp(1rem, 3.5vw, 1.35rem);
+  color: var(--primary) !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-logo {
+  height: 36px;
+  width: auto;
+}
+
+/* Navigation */
+.nav-link {
+  font-weight: 600;
+  margin: 0 10px;
+  color: var(--gray-700) !important;
+  transition: color var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary) !important;
+}
+
+/* Contact Button */
+.btn-primary {
+  border-radius: var(--radius-full);
+  padding: 10px 22px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Theme Button */
+.theme-btn {
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background var(--transition-fast);
+}
+
+.theme-btn:hover {
+  background: var(--primary-gradient-soft);
+}
+
+/* Hamburger */
+.navbar-toggler {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.25);
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .nav-item {
+    margin: 4px 0;
+  }
+
+  .nav-link {
+    justify-content: center;
+    margin: 0;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+
+  .theme-btn {
+    font-size: 24px;
+    margin: 0 auto;
+  }
+}
+
+nav a {
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+/* ============================================================
+   DARK THEME — Navbar
+   ============================================================ */
+body.dark-theme .navbar {
+  background: rgba(10, 10, 15, 0.85) !important;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(39, 39, 42, 0.6);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .nav-link {
+  color: var(--text-light) !important;
+}
+
+body.dark-theme .nav-link:hover,
+body.dark-theme .nav-link.active {
+  color: var(--primary) !important;
+}
+
+body.dark-theme .logo {
+  color: var(--primary) !important;
+  text-shadow: 0 0 20px rgba(45, 212, 191, 0.3);
+}
+
+body.dark-theme .theme-btn {
+  color: var(--text);
+}
+
+body.dark-theme .theme-btn:hover {
+  background: var(--bg-hover);
+  color: var(--primary);
+}
+
+body.dark-theme .navbar-toggler {
+  border-color: var(--border-light);
+  color: var(--text);
+}
+
+body.dark-theme .navbar-toggler:focus {
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.2);
+}

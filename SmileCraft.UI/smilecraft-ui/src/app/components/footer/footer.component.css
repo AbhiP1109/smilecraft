@@ -1,0 +1,324 @@
+/* ============================================================
+   Footer — Mobile First
+   ============================================================ */
+
+.footer {
+  background: var(--gray-900);
+  color: var(--white);
+  padding: 0 0 20px;
+  position: relative;
+}
+
+/* Wave Divider */
+.footer-wave {
+  line-height: 0;
+  margin-bottom: -1px;
+}
+
+.footer-wave svg {
+  width: 100%;
+  height: 80px;
+  display: block;
+}
+
+/* Grid: 4 cols → 2 tablet → 1 mobile */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  padding: 40px 0 30px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  margin-bottom: 20px;
+  font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+  color: var(--white);
+}
+
+.footer-col p {
+  color: var(--gray-400);
+  line-height: 1.8;
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
+}
+
+/* Brand */
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.footer-logo {
+  width: 40px;
+  height: 40px;
+  background: var(--primary-gradient);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+.footer-logo svg {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-brand h3 {
+  margin-bottom: 0;
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+}
+
+/* Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 4px;
+}
+
+.footer-links a {
+  color: var(--gray-400);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
+}
+
+.footer-links a:hover {
+  color: var(--primary-light);
+}
+
+/* Contact */
+.footer-contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-contact li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: var(--gray-400);
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
+  min-height: 44px;
+}
+
+.footer-contact svg {
+  width: 18px;
+  height: 18px;
+  color: var(--primary-light);
+  flex-shrink: 0;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--gray-800);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  transition: all var(--transition);
+  flex-shrink: 0;
+}
+
+.social-icons a:hover {
+  background: var(--primary);
+  transform: translateY(-4px);
+}
+
+.social-icons svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Bottom */
+.footer-bottom {
+  text-align: center;
+  padding-top: 24px;
+  border-top: 1px solid var(--gray-700);
+}
+
+.footer-bottom p {
+  color: var(--gray-500);
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  margin: 0;
+}
+
+/* Back to Top */
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  background: var(--primary-gradient);
+  color: var(--white);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-primary);
+  z-index: 1000;
+  transition: all var(--transition);
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.back-to-top:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px -5px rgba(13, 148, 136, 0.45);
+}
+
+.back-to-top svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ============================================================
+   Tablet (≤992px)
+   ============================================================ */
+@media (max-width: 992px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+/* ============================================================
+   Mobile (≤768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 30px;
+    padding: 30px 0 20px;
+  }
+
+  .footer-brand {
+    justify-content: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-contact li {
+    justify-content: center;
+  }
+
+  .footer-wave svg {
+    height: 50px;
+  }
+
+  .back-to-top {
+    width: 44px;
+    height: 44px;
+    bottom: 16px;
+    right: 16px;
+  }
+}
+
+/* Safe area for notched devices */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .footer {
+    padding-bottom: calc(20px + env(safe-area-inset-bottom));
+  }
+}
+
+/* ============================================================
+   DARK THEME — Footer
+   ============================================================ */
+body.dark-theme .footer {
+  background: linear-gradient(180deg, #0A0A0F 0%, #08080D 100%);
+  border-top: 1px solid var(--border);
+}
+
+body.dark-theme .footer h4 {
+  color: var(--text);
+}
+
+body.dark-theme .footer p,
+body.dark-theme .footer a {
+  color: var(--text-light);
+}
+
+body.dark-theme .footer a:hover {
+  color: var(--primary);
+}
+
+body.dark-theme .footer-links a {
+  color: var(--text-light);
+}
+
+body.dark-theme .footer-links a:hover {
+  color: var(--primary);
+}
+
+body.dark-theme .footer-contact li {
+  color: var(--text-light);
+}
+
+body.dark-theme .footer-contact svg {
+  color: var(--primary);
+}
+
+body.dark-theme .social-icons a {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+body.dark-theme .social-icons a:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--bg);
+  box-shadow: 0 0 20px rgba(45, 212, 191, 0.3);
+  transform: translateY(-4px);
+}
+
+body.dark-theme .footer-bottom {
+  border-top-color: var(--border);
+}
+
+body.dark-theme .footer-bottom p {
+  color: var(--text-muted);
+}
+
+body.dark-theme .back-to-top {
+  background: var(--primary-gradient);
+  box-shadow: var(--shadow-primary), 0 0 20px rgba(45, 212, 191, 0.3);
+}
+
+body.dark-theme .back-to-top:hover {
+  box-shadow: 0 15px 35px -5px rgba(45, 212, 191, 0.4), 0 0 30px rgba(45, 212, 191, 0.3);
+}

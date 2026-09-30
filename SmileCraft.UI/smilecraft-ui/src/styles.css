@@ -1,0 +1,116 @@
+/* SmileCraft Dental Clinic - Premium Global Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('./assets/css/variables.css');
+@import url('./assets/css/global.css');
+@import url('./assets/css/buttons.css');
+@import url('./assets/css/cards.css');
+@import url('./assets/css/animations.css');
+@import url('./assets/css/responsive.css');
+@import url('./assets/css/theme.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  transition: background-color 0.4s, color 0.4s;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* LIGHT THEME */
+body.light-theme {
+  background: #ffffff;
+  color: #1E293B;
+}
+
+/* DARK THEME */
+body.dark-theme {
+  background: #0A0A0F;
+  color: #F5F5F7;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+/* Links */
+a {
+  transition: color var(--transition-fast);
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Section */
+section {
+  overflow: hidden;
+  position: relative;
+}
+
+.section {
+  padding: var(--section-padding);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 70px 0;
+  }
+}
+
+/* Container */
+.container {
+  max-width: var(--container-max);
+  margin: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* CDK Overlay */
+.cdk-overlay-container {
+  z-index: 10000 !important;
+}
+
+/* Utility Classes */
+.text-gradient {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-gradient-primary {
+  background: var(--primary-gradient);
+}
+
+.bg-gradient-soft {
+  background: var(--primary-gradient-soft);
+}
+
+/* Glass Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+body.dark-theme .glass {
+  background: rgba(26, 26, 37, 0.8);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--border);
+}

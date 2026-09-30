@@ -1,0 +1,158 @@
+<div class="container py-5">
+  <h2>Configuration Editor</h2>
+  <p class="text-muted">Edit clinic configuration. Changes are saved to localStorage and override the default config file.</p>
+
+  <div *ngIf="saved" class="alert alert-success">Configuration saved successfully!</div>
+  <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+
+  <form *ngIf="config" (ngSubmit)="save()">
+    <!-- Clinic -->
+    <div class="card mb-4">
+      <div class="card-header">Clinic Information</div>
+      <div class="card-body">
+        <div class="mb-3">
+          <label class="form-label">Clinic Name</label>
+          <input type="text" class="form-control" [(ngModel)]="config.clinic.name" name="clinicName">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Tagline</label>
+          <input type="text" class="form-control" [(ngModel)]="config.clinic.tagline" name="tagline">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Description</label>
+          <textarea class="form-control" rows="3" [(ngModel)]="config.clinic.description" name="description"></textarea>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Logo URL</label>
+          <input type="text" class="form-control" [(ngModel)]="config.clinic.logo" name="logo">
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="card mb-4">
+      <div class="card-header">Contact Information</div>
+      <div class="card-body">
+        <div class="mb-3">
+          <label class="form-label">Address</label>
+          <textarea class="form-control" rows="2" [(ngModel)]="config.contact.address" name="address"></textarea>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Primary Phone</label>
+            <input type="text" class="form-control" [(ngModel)]="config.contact.phone" name="phone">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Secondary Phone</label>
+            <input type="text" class="form-control" [(ngModel)]="config.contact.phoneSecondary" name="phoneSecondary">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" [(ngModel)]="config.contact.email" name="email">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Emergency Phone</label>
+            <input type="text" class="form-control" [(ngModel)]="config.contact.emergencyPhone" name="emergencyPhone">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Social -->
+    <div class="card mb-4">
+      <div class="card-header">Social Media Links</div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Facebook</label>
+            <input type="url" class="form-control" [(ngModel)]="config.social.facebook" name="facebook">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Instagram</label>
+            <input type="url" class="form-control" [(ngModel)]="config.social.instagram" name="instagram">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Twitter</label>
+            <input type="url" class="form-control" [(ngModel)]="config.social.twitter" name="twitter">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">LinkedIn</label>
+            <input type="url" class="form-control" [(ngModel)]="config.social.linkedin" name="linkedin">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">YouTube</label>
+            <input type="url" class="form-control" [(ngModel)]="config.social.youtube" name="youtube">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">WhatsApp</label>
+            <input type="url" class="form-control" [(ngModel)]="config.social.whatsapp" name="whatsapp">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hours -->
+    <div class="card mb-4">
+      <div class="card-header">Working Hours</div>
+      <div class="card-body">
+        <div *ngFor="let hour of config.hours; let i = index" class="row mb-2">
+          <div class="col-md-5">
+            <input type="text" class="form-control" [(ngModel)]="hour.days" [name]="'days' + i" placeholder="Days">
+          </div>
+          <div class="col-md-5">
+            <input type="text" class="form-control" [(ngModel)]="hour.time" [name]="'time' + i" placeholder="Time">
+          </div>
+          <div class="col-md-2">
+            <button type="button" class="btn btn-danger" (click)="removeHour(i)">Remove</button>
+          </div>
+        </div>
+        <button type="button" class="btn btn-secondary" (click)="addHour()">Add Hour</button>
+      </div>
+    </div>
+
+    <!-- Map -->
+    <div class="card mb-4">
+      <div class="card-header">Map</div>
+      <div class="card-body">
+        <div class="mb-3">
+          <label class="form-label">Embed URL</label>
+          <input type="url" class="form-control" [(ngModel)]="config.map.embedUrl" name="embedUrl">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Link</label>
+          <input type="url" class="form-control" [(ngModel)]="config.map.link" name="mapLink">
+        </div>
+      </div>
+    </div>
+
+    <!-- SEO -->
+    <div class="card mb-4">
+      <div class="card-header">SEO</div>
+      <div class="card-body">
+        <div class="mb-3">
+          <label class="form-label">Title</label>
+          <input type="text" class="form-control" [(ngModel)]="config.seo.title" name="seoTitle">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Description</label>
+          <textarea class="form-control" rows="2" [(ngModel)]="config.seo.description" name="seoDesc"></textarea>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Keywords</label>
+          <input type="text" class="form-control" [(ngModel)]="config.seo.keywords" name="keywords">
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex gap-2">
+      <button type="submit" class="btn btn-primary">Save Configuration</button>
+      <button type="button" class="btn btn-outline-danger" (click)="reset()">Reset to Default</button>
+    </div>
+  </form>
+</div>

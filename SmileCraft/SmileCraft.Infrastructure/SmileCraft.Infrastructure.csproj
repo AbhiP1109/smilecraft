@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SmileCraft.Application\SmileCraft.Application.csproj" />
+    <ProjectReference Include="..\SmileCraft.Domain\SmileCraft.Domain.csproj" />
+    <ProjectReference Include="..\SmileCraft.Shared\SmileCraft.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,82 @@
+:host {
+  display: inline-block;
+}
+
+button {
+  padding: 14px 32px;
+  border-radius: var(--radius-full);
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 44px;
+  min-width: 44px;
+  touch-action: manipulation;
+}
+
+.btn-primary-custom {
+  background: var(--primary-gradient);
+  color: #fff;
+  box-shadow: var(--shadow-primary);
+}
+
+.btn-primary-custom:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px -5px rgba(13, 148, 136, 0.45);
+}
+
+.btn-primary-custom:active {
+  transform: translateY(-1px);
+}
+
+.btn-outline-custom {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.btn-outline-custom:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-primary);
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  button {
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+}
+
+/* ============================================================
+   DARK THEME — Button Component
+   ============================================================ */
+body.dark-theme .btn-primary-custom {
+  box-shadow: var(--shadow-primary), 0 0 20px rgba(45, 212, 191, 0.2);
+}
+
+body.dark-theme .btn-primary-custom:hover {
+  box-shadow: 0 15px 35px -5px rgba(45, 212, 191, 0.4), 0 0 30px rgba(45, 212, 191, 0.2);
+}
+
+body.dark-theme .btn-outline-custom {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+body.dark-theme .btn-outline-custom:hover {
+  background: var(--primary);
+  color: var(--bg);
+  box-shadow: 0 0 20px rgba(45, 212, 191, 0.3);
+}

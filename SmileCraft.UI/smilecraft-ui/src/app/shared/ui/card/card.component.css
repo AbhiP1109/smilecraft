@@ -1,0 +1,48 @@
+/* Premium Card Component */
+
+.card-custom {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.card-custom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--primary-gradient);
+  transform: scaleX(0);
+  transition: transform var(--transition);
+}
+
+.card-custom:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-custom:hover::before {
+  transform: scaleX(1);
+}
+
+/* ============================================================
+   DARK THEME — Card Component
+   ============================================================ */
+body.dark-theme .card-custom {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  box-shadow: var(--shadow-md);
+}
+
+body.dark-theme .card-custom:hover {
+  border-color: var(--border-light);
+  box-shadow: var(--shadow-lg), 0 0 30px rgba(45, 212, 191, 0.05);
+}
